@@ -1,0 +1,159 @@
+{
+  "root": true,
+  "env": {
+      "node": true,
+      "browser": true,
+      "es6": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+      "project": [
+          "./tsconfig.json"
+      ]
+  },
+  "globals": {
+      "process": true,
+      "console": true
+  },
+  "plugins": [
+      "eslint-plugin",
+      "import",
+      "unused-imports",
+      "node"
+  ],
+  "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "import/no-named-default": "error",
+      "import/no-unassigned-import": "error",
+      "unused-imports/no-unused-imports": "error",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/strict-boolean-expressions": [
+          2,
+          {
+              "allowString": false,
+              "allowNumber": false
+          }
+      ],
+      "strict": [
+          "error",
+          "global"
+      ],
+      "@typescript-eslint/ban-types": [
+          "error",
+          {
+              "types": {
+                  "Foo": "Don't use Foo because it is unsafe",
+                  "OldAPI": {
+                      "message": "Use NewAPI instead",
+                      "fixWith": "NewAPI"
+                  },
+                  "{}": false
+              },
+              "extendDefaults": true
+          }
+      ],
+      "no-unused-vars": [
+          "warn",
+          {
+              "argsIgnorePattern": "next"
+          }
+      ],
+      "no-var": "error",
+      "no-sync": "error",
+      "prefer-template": "error",
+      "prefer-arrow-callback": "error",
+      "indent": [
+          "error",
+          2
+      ],
+      "semi": [
+          "error",
+          "always"
+      ],
+      "quotes": [
+          "error",
+          "single"
+      ],
+      "comma-dangle": [
+          "error",
+          "always-multiline"
+      ],
+      "object-curly-spacing": [
+          "error",
+          "always"
+      ],
+      "array-bracket-spacing": [
+          "error",
+          "always"
+      ],
+      "no-trailing-spaces": "error",
+      "no-global-assign": "error",
+      "no-implicit-globals": "error",
+      "id-length": [
+          "error",
+          {
+              "min": 2,
+              "max": 30
+          }
+      ],
+      "camelcase": "error",
+      "consistent-this": [
+          "error",
+          "self"
+      ],
+      "func-names": "error",
+      "complexity": [
+          "error",
+          {
+              "max": 10
+          }
+      ],
+      "no-nested-ternary": "error",
+      "max-depth": [
+          "error",
+          {
+              "max": 3
+          }
+      ],
+      "prefer-destructuring": "error",
+      "prefer-rest-params": "error",
+      "prefer-spread": "error",
+      "template-curly-spacing": [
+          "error",
+          "always"
+      ],
+      "no-eval": "error",
+      "no-implied-eval": "error",
+      "no-new-func": "error",
+      "no-script-url": "error",
+      "no-use-before-define": "error",
+      "no-restricted-properties": [
+          "error",
+          {
+              "object": "Buffer",
+              "property": "from"
+          },
+          {
+              "object": "Buffer",
+              "property": "allocUnsafe"
+          }
+      ],
+      "no-process-exit": "error",
+      "no-buffer-constructor": "error",
+      "no-path-concat": "error",
+      "no-new-require": "error",
+      "no-implicit-coercion": "error",
+      "no-magic-numbers": [
+          "error",
+          {
+              "ignoreArrayIndexes": true
+          }
+      ],
+      "no-undef-init": "error",
+      "callback-return": "error"
+  }
+}
